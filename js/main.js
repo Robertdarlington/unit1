@@ -1,12 +1,12 @@
-var mydiv = document.getElementById("mydiv");
-mydiv.innerHTML = "Hello World";
-
-function myfunc(){
-    var mydiv = document.getElementById("mydiv");
-    mydiv.innerHTML = "Hello World";
-};
-
-window.onload = myfunc();
+// var mydiv = document.getElementById("mydiv");
+// mydiv.innerHTML = "Hello World";
+//
+// function myfunc(){
+//     var mydiv = document.getElementById("mydiv");
+//     mydiv.innerHTML = "Hello World";
+// };
+//
+// window.onload = myfunc();
 
 //initialize function called when the script loads
 function initialize(){
@@ -92,17 +92,17 @@ $('script').each(function(){
 //Added below Example 3.8...
 //click listener with anonymous handler function
 $('table').on('click', function(){
-		alert('Madison Rocks! Go Badgers!');
+    alert('Madison Rocks! Go Badgers!');
 });
 
 //alias method for the click event listener
 $('table').click(function(){
-		alert('Visit Superior and see the big lake!');
+    alert('Visit Superior and see the big lake!');
 });
 
 //named handler function for removable listener
 function clickme(){
-		alert('Yeah Green Bay! Go Packers!');
+    alert('Yeah Green Bay! Go Packers!');
 };
 
 //add the event listener
@@ -114,11 +114,13 @@ $('table').off('click', clickme);
 //call the initialize function when the document has loaded
 $(document).ready(initialize);
 
-//function to create a columns of city's populations with additon labels
+//function to create columns of city's populations with additon labels
+
 function addColumns(citySize){
 		//creates a loop for adding values
     $('tr').each(function(i){
 			//sets the variable as 0
+      console.log("Hello World");
     	if (i == 0){
 				//append was mistyped
     		$(this).append('<th>citySize</th>');
@@ -136,37 +138,37 @@ function addColumns(citySize){
     			citySize = 'Large';
     		};
 
-    		$this.append('<td' + citySize + '</td>');
+    		$(this).append('<th>citySize</td>');
     	};
     });
 };
-//adds event to the action of the mouse on the page
-function addEvents(){
-	//when the mouse moves over the table...
-	$('#table').mouseover(function(){
-		//assigns the color
-		var color = "rgb(";
-		//condition of where to assign color
-		for (var i==0; i<3; i++){
-
-			var random = Math.round(Math.random() * 255);
-
-			color += "random";
-
-			if (i<2){
-				color += ",";
-
-			} else {
-				color += ")";
-		};
-
-		$(this).css('color', color);
-	});
-	//action if clicked
-	function clickme(){
-		//message when the table is clicked
-		alert('Hey, you clicked me!');
-	};
-
-	$('table').on('click', clickme);
-};
+// //adds event to the action of the mouse on the page
+// function addEvents(){
+// 	//when the mouse moves over the table...
+// 	$('#table').mouseover(function(){
+// 		//assigns the color
+// 		var color = "rgb(";
+// 		//condition of where to assign color
+// 		for (var i==0; i<3; i++){
+//
+// 			var random = Math.round(Math.random() * 255);
+//
+// 			color += "random";
+//
+// 			if (i<2){
+// 				color += ",";
+//
+// 			} else {
+// 				color += ")";
+// 		};
+//
+// 		$(this).css('color', color);
+// 	});
+// 	//action if clicked
+// 	function clickme(){
+// 		//message when the table is clicked
+// 		alert('Hey, you clicked me!');
+// 	};
+//
+// 	$('table').on('click', clickme);
+// };
